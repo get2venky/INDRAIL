@@ -1,0 +1,8 @@
+Background
+When we think about deterministic automation, the image that comes to mind is a complex system landscape being serviced by virtual bots 
+which take over repetitive human tasks like loading data from excel sheets into applications. 
+Organizations may spend a good chunk of their IT budget on procuring licenses of RPA and implementing the bots.  
+However, this post is not about RPA products. Rather, the focus here is on developing an RPA like tool free of cost. 
+Only two things are required for developing such a tool in DIY mode: basic programming background and a bit of imagination. 
+Before proceeding further, let me state that I speak from experience, having used open source software to automate some of 
+my repetitive tasks as a manager. 
