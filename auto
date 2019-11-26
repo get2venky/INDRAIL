@@ -5,4 +5,20 @@ Organizations may spend a good chunk of their IT budget on procuring licenses of
 However, this post is not about RPA products. Rather, the focus here is on developing an RPA like tool free of cost. 
 Only two things are required for developing such a tool in DIY mode: basic programming background and a bit of imagination. 
 Before proceeding further, let me state that I speak from experience, having used open source software to automate some of 
-my repetitive tasks as a manager. 
+my repetitive tasks as a manager.
+
+Use Cases
+Ok, moving forward, all IT enabled organizations have an intranet which we access to open up different kind of applications. There could be applications for leave applications, on-duty and financial applications for revenue and budgeting, expense management etc. Often, the kind of action that we take on these applications is deterministic – for e.g. we may always approve certain kind of claims or on-duty requests from certain team members who we know work on shifts in non-regular hours.   These tasks would qualify hands down for being automated through RPA but then your organization may not have immediate plans of adopting an enterprise wide RPA tool. That’s when you roll up your sleeves, download Python 3.x and build a simple RPA for yourself.
+Python
+No, don’t stop reading because you don’t know Python. I myself am from an Oracle background and had no idea of this wonderful open source language. Actually my interest in data science had prompted me to download Python; automation was never the intention. However, I stumbled upon a great book called “Automate the Boring Stuff with Python” by Al Sweigart and  thought it would be cool to learn Python by building something useful for myself.  Looking back, I think I did the wise thing. For anyone with a programming background, Python is an extremely easy language to learn – the variable assignments, reading from/writing into files, control structures, date time manipulations are pretty intuitive. And of course there is tons of help on the internet if you are ever stuck. Rest assured that someone has already published a solution for the coding issue that you ran into – you just have to google. 
+What actually happens
+Ok, delving a bit more into the details, we use Python (Selenium package) to open up a browser session and navigate to the intranet web page of interest. You could use Chrome or IE or Firefox, though I found Chrome easier to work with. Next, the program logic that you code fills in the fields, chooses values from dropdowns, checks boxes etc, i.e. all manual steps are done automatically.  Finally, the program clicks the approve or submit or whatever button needs to be clicked. You could even loop around multiple records and repeat the same action. 
+You can even keep default values in a simple Setup file (text), which can be configured as per your need, without having to change the program. For e.g. if you are automating attendance approvals (i.e. when people connect remotely and submit on-duty requests), you might want to keep a list of individuals whose attendance should be done only after questioning. These set of names can be kept in a text file which the program will exclude from automated processing. 
+On invoking the program, you could simply launch from the windows run dialog (invoked by windows + R) where you type a single letter and move back to your regular work, as unobtrusive as that – you can even pass additional parameters while launching the program in this manner, to take selective action in the current run. The browser can be configured to quickly minimize after launch so that it does not interfere with your regular work. Alternatively, you can also use the windows batch scheduler to have the program launch at a predefined time of the day – recommended when there are no additional runtime parameters.
+The architecture for this automation is as below. 
+
+<Diagaram Here>
+
+I developed it for Windows but I believe it could be done for any other OS with as much ease. 
+Disclaimer – While open source software is free to use in general for non-commercial work, do check your organization’s policy in this regard. Happy Coding! 
+
